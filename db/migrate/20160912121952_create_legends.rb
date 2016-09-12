@@ -4,6 +4,7 @@ Sequel.migration do
       Uuid :id, primary_key: true, default: 'uuid_generate_v4()'.lit
       foreign_key :layer_id, :layers, type: 'uuid', null: false, on_delete: :cascade
 
+      String :category, null: false
       String :title, null: false
       String :prehtml, null: false
       String :posthtml, null: false
